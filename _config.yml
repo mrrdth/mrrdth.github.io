@@ -1,18 +1,20 @@
-name: &name Meredith Lane
+title: software && sounds 
+email: meredith@softwaresounds.com
+description: >- # this means to ignore newlines until "baseurl:"
+  Personal site for Meredith Lane, a software and sound engineer living in
+  Sydney, Australia. Accessibility, Web Design, Sound Design.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://softwaresounds.com" # the base hostname & protocol for your site, e.g. http://example.com
+github_username:  mrrdth
 
-title: *name
-author: *name
+# Build settings
+theme: minima
+plugins:
+  - jekyll-feed
 
-description: "The site of Meredith Lane, a software engineer and musician living in Sydney."
-baseurl: ""
-paginate: 10
-
-url: "https://softwaresounds.com"
-
-date_format: "%B %-d, %Y"
-timezone: Australia/Sydney
-
-
-markdown: kramdown
-permalink: pretty
-highlighter: rouge
+exclude:
+   - .sass-cache/
+   - .jekyll-cache/
+   - gemfiles/
+   - Gemfile
+   - Gemfile.lock
