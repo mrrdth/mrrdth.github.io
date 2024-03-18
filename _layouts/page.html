@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  {% capture title %}{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}{% endcapture %}
+  <title>{{ title }}</title>
+  <link rel="stylesheet" href="/css/main.css">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  {%- capture page_description -%}
+  {%- if page.auto_excerpt -%}{{ page.content | strip_html | truncatewords: 80 }}{% else %}{{ site.description }}{%
+  endif %}
+  {%- endcapture -%}
+  <meta name="description" content="{{ page_description }}">
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}"
+    href="{{ site.feeds.rss_url | absolute_url }}" />
+  <link rel="alternate" type="application/feed+json" title="{{ site.title }}"
+    href="{{ site.feeds.json_url | absolute_url }}" />
+
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:type" content="{{ page.type }}">
+  <meta property="og:title" content="{{ title }}">
+  <meta property="og:description" content="{{ page_description }}">
+  <meta property="og:image" content="{{ page.image }}">
+
+<body>
+  {% include header.html %}
+  <div class="container">
+    <p class="coming-soon">Under construction.</p>
+    <p>
+      <a class="u-email" href="mailto:meredith@softwaresounds.com">meredith@softwaresounds.com</a>
+    </p>
+  </div>
+</body>
+
+</html>

@@ -13,10 +13,8 @@ date_format: "%B %-d, %Y"
 timezone: Australia/Sydney
 
 # Build settings
-theme: minima
 plugins:
   - jekyll-feed
-paginate: 10
 
 exclude:
    - .sass-cache/
